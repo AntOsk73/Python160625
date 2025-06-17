@@ -26,3 +26,6 @@ if num % 5 == 0:
     print("you're free to")
 else:
     print("sorry, you stay in prison")
+
+import random
+print("Random number:", random.randint(1, 100))
