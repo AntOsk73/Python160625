@@ -14,3 +14,9 @@ a = 5
 b = 10
 c = 3
 print("Largest is", max(a, b, c))
+
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
