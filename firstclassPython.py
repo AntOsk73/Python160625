@@ -70,6 +70,30 @@ location = input("Where are you located? ")
 # Displaying the final message
 print(f"I, {name}, from {location}, working as a {job}, with the salary of {salary}, would love to work in cloud and AI.")
 
+for num in range(1, 1001):
+    print(num)
+
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Testing the function
+number = int(input("Enter a number: "))
+if is_prime(number):
+    print(f"{number} is a prime number.")
+else:
+    print(f"{number} is not a prime number.")
+
+print("Prime numbers from 1 to 100:")
+for num in range(1, 101):
+    if is_prime(num):
+        print(num, end=" ")
+
 
 
         
