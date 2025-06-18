@@ -1,4 +1,4 @@
-# Start with a balance of 0
+"""Start with a balance of 0
 balance = 0.0
 
 while True:
@@ -43,4 +43,38 @@ while True:
 
     # Invalid input
     else:
-        print("Invalid choice! Please select a valid option.")
+        print("Invalid choice! Please select a valid option.")"""
+
+print("\nWelcome to the Investment Options System!")
+
+# Display investment options
+print("Available investment options:")
+print("1. Fixed Deposit: Minimum $100")
+print("2. Stock Market Fund: Minimum $200")
+print("3. Crypto Basket: Minimum $50")
+
+# Ask user for their choice
+choice = input("Choose an option (1-3): ")
+amount = float(input("Enter investment amount: "))
+
+# Checking investment conditions using `if` statements
+if choice == "1":
+    if amount >= 100:
+        print(f"Investment successful! You have invested ${amount} in Fixed Deposit.")
+    else:
+        print("Minimum amount for Fixed Deposit is $100.")
+        
+if choice == "2":
+    if amount >= 200:
+        print(f"Investment successful! You have invested ${amount} in Stock Market Fund.")
+    else:
+        print("Minimum amount for Stock Market Fund is $200.")
+        
+if choice == "3":
+    if amount >= 50:
+        print(f"Investment successful! You have invested ${amount} in Crypto Basket.")
+    else:
+        print("Minimum amount for Crypto Basket is $50.")
+
+if choice not in ["1", "2", "3"]:
+    print("Invalid choice! Please select a valid option.")
