@@ -94,6 +94,15 @@ for num in range(1, 101):
     if is_prime(num):
         print(num, end=" ")
 
+n = int(input("Enter how many Fibonacci numbers to print: "))
+a = 0
+b = 1
+for i in range(n):
+   print(a)
+   next = a + b
+   a = b
+   b = next        
+
 
 
         
