@@ -43,7 +43,7 @@ while True:
 
     # Invalid input
     else:
-        print("Invalid choice! Please select a valid option.")"""
+        print("Invalid choice! Please select a valid option.")
 
 print("\nWelcome to the Investment Options System!")
 
@@ -77,4 +77,66 @@ if choice == "3":
         print("Minimum amount for Crypto Basket is $50.")
 
 if choice not in ["1", "2", "3"]:
-    print("Invalid choice! Please select a valid option.")
+    print("Invalid choice! Please select a valid option.")"""
+
+# Food calorie list (per unit or per 100g)
+food_calories = {
+    "egg": 70,
+    "carrot": 20,
+    "nutella": 1,  # 100 kcal per 100g, multiply by input amount
+    "toast": 80,
+    "banana": 90,
+    "chicken breast": 1.65,  # 165 kcal per 100g, multiply by input amount
+    "rice": 200,
+    "apple": 95,
+    "milk": 120,
+    "yogurt": 1  # 100 kcal per 100g, multiply by input amount
+}
+
+# Show menu
+print("\nWelcome to the Meal Calorie Calculator!")
+print("Available food items:")
+print("Egg, Carrot, Nutella (100g), Toast, Banana, Chicken Breast (100g), Rice, Apple, Milk, Yogurt (100g)")
+
+# Breakfast
+breakfast_item = input("\nEnter a food item for breakfast: ").lower()
+breakfast_quantity = float(input("Enter quantity (e.g., 2 eggs, 100g Nutella): "))
+
+breakfast_calories = 0
+if breakfast_item in food_calories:
+    if breakfast_item in ["nutella", "chicken breast", "yogurt"]:  # Items measured in grams
+        breakfast_calories = food_calories[breakfast_item] * breakfast_quantity
+    else:
+        breakfast_calories = food_calories[breakfast_item] * int(breakfast_quantity)
+
+print(f"Breakfast Calories: {breakfast_calories:.2f} kcal")
+
+# Lunch
+lunch_item = input("\nEnter a food item for lunch: ").lower()
+lunch_quantity = float(input("Enter quantity (e.g., 2 eggs, 100g Nutella): "))
+
+lunch_calories = 0
+if lunch_item in food_calories:
+    if lunch_item in ["nutella", "chicken breast", "yogurt"]:
+        lunch_calories = food_calories[lunch_item] * lunch_quantity
+    else:
+        lunch_calories = food_calories[lunch_item] * int(lunch_quantity)
+
+print(f"Lunch Calories: {lunch_calories:.2f} kcal")
+
+# Dinner
+dinner_item = input("\nEnter a food item for dinner: ").lower()
+dinner_quantity = float(input("Enter quantity (e.g., 2 eggs, 100g Nutella): "))
+
+dinner_calories = 0
+if dinner_item in food_calories:
+    if dinner_item in ["nutella", "chicken breast", "yogurt"]:
+        dinner_calories = food_calories[dinner_item] * dinner_quantity
+    else:
+        dinner_calories = food_calories[dinner_item] * int(dinner_quantity)
+
+print(f"Dinner Calories: {dinner_calories:.2f} kcal")
+
+# Total Calories
+total_day_calories = breakfast_calories + lunch_calories + dinner_calories
+print(f"\nTotal Calories for the Day: {total_day_calories:.2f} kcal")
