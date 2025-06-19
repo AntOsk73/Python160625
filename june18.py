@@ -139,7 +139,7 @@ print(f"Dinner Calories: {dinner_calories:.2f} kcal")
 
 # Total Calories
 total_day_calories = breakfast_calories + lunch_calories + dinner_calories
-print(f"\nTotal Calories for the Day: {total_day_calories:.2f} kcal")"""
+print(f"\nTotal Calories for the Day: {total_day_calories:.2f} kcal")
 
 # Ask the user what they want to convert
 choice = input("Type 'C' to convert Celsius to Fahrenheit or 'F' to convert Fahrenheit to Celsius: ").upper()
@@ -158,4 +158,12 @@ if choice == "F":
 
 # If user enters something wrong
 if choice not in ["C", "F"]:
-    print("Invalid choice! Please enter 'C' or 'F'.")
+    print("Invalid choice! Please enter 'C' or 'F'.")"""
+
+word = input("Enter a word: ").lower()  # Get the word and make it lowercase
+
+if word[0] in "aeiou":  # Check if the first letter is a vowel
+    print("This word starts with a vowel!")
+else:
+    print("This word does NOT start with a vowel.")
+
