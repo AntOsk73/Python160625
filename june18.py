@@ -77,7 +77,7 @@ if choice == "3":
         print("Minimum amount for Crypto Basket is $50.")
 
 if choice not in ["1", "2", "3"]:
-    print("Invalid choice! Please select a valid option.")"""
+    print("Invalid choice! Please select a valid option.")
 
 # Food calorie list (per unit or per 100g)
 food_calories = {
@@ -139,4 +139,23 @@ print(f"Dinner Calories: {dinner_calories:.2f} kcal")
 
 # Total Calories
 total_day_calories = breakfast_calories + lunch_calories + dinner_calories
-print(f"\nTotal Calories for the Day: {total_day_calories:.2f} kcal")
+print(f"\nTotal Calories for the Day: {total_day_calories:.2f} kcal")"""
+
+# Ask the user what they want to convert
+choice = input("Type 'C' to convert Celsius to Fahrenheit or 'F' to convert Fahrenheit to Celsius: ").upper()
+
+# If user chooses Celsius to Fahrenheit
+if choice == "C":
+    celsius = float(input("Enter temperature in Celsius: "))
+    fahrenheit = (celsius * 1.8) + 32
+    print(f"{celsius}°C is {fahrenheit:.2f}°F")
+
+# If user chooses Fahrenheit to Celsius
+if choice == "F":
+    fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+    celsius = (fahrenheit - 32) / 1.8
+    print(f"{fahrenheit}°F is {celsius:.2f}°C")
+
+# If user enters something wrong
+if choice not in ["C", "F"]:
+    print("Invalid choice! Please enter 'C' or 'F'.")
